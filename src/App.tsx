@@ -8,7 +8,7 @@ import Contact from './pagesComponent/contact'
 
 function App() {
   const [clicked, setClicked] = useState(false)
-  const [scroll, setScroll] = useState(0)
+  // const [scroll, setScroll] = useState(0)
 
   return (
     <div className='w-screen flex flex-col relative'>
