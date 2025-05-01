@@ -7,7 +7,7 @@ import About from './pagesComponent/about'
 import Contact from './pagesComponent/contact'
 
 function App() {
-  const [clicked, setClicked] = useState(false)
+  const [clicked, setClicked] = useState(true)
 
   return (
     <div className='w-screen flex flex-col relative'>
