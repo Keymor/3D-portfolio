@@ -1,5 +1,14 @@
 @import "tailwindcss";
 
-img {
-  opacity: 10%;
+.fontFam, .fontFamLogo {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, ;
+  font-weight: 600;
+}
+
+.fontFam {
+  font-size: 1.4rem;
+}
+
+.cliper {
+  overflow: clip;
 }
