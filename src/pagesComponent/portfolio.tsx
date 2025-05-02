@@ -2,7 +2,7 @@ import ImageBox from "../components/imageBox";
 
 export default function Portfolio() {
     return (
-        <div className="w-screen h-screen bg-gray-300 flex flex-col">
+        <div className="w-screen h-screen bg-white flex flex-col inset-shadow-[0_20px_30px_rgb(0,0,0,0.3)]">
             <div className="h-25"/>
             <div className="flex flex-row gap-11 mt-30 mx-auto items-end">
                 <ImageBox ofset={0} />
