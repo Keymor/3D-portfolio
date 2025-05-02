@@ -12,9 +12,8 @@ export default function Home() {
     }
 
     useEffect(() => {
-        setTimeout(() => {
-            changeImg()
-        }, 5000)
+        const intervalID = setInterval(changeImg, 2000)
+        return () => clearInterval(intervalID);
     }, [slide])
 
     return (
