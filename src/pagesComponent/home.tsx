@@ -12,7 +12,7 @@ export default function Home() {
     }
 
     useEffect(() => {
-        const intervalID = setInterval(changeImg, 2000)
+        const intervalID = setInterval(changeImg, 5000)
         return () => clearInterval(intervalID);
     }, [slide])
 
