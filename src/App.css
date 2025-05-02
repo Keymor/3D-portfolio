@@ -5,6 +5,14 @@
   font-weight: 600;
 }
 
+.fontPortfolio {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 20vh;
+  color: black;
+  text-align: center;
+  letter-spacing: 1.4vh;
+}
+
 .fontFam {
   font-size: 1.4rem;
 }
