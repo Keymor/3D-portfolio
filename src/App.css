@@ -17,6 +17,23 @@ body {
   letter-spacing: 1.4vh;
 }
 
+.fontAbout {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 12rem;
+  letter-spacing: 0.7rem;
+}
+
+.fontAbout::after {
+  position: absolute;
+  bottom: 0.8rem;
+  left: 0;
+  transform: translateX(-75%);
+  content: '';
+  height: 0.2rem;
+  width: 200%;
+  background-color: white;
+}
+
 .fontFam {
   font-size: 1.4rem;
 }
