@@ -12,7 +12,7 @@ body {
 .fontPortfolio {
   font-family: "Bebas Neue", sans-serif;
   font-size: 20vh;
-  color: black;
+  color: rgb(33, 33, 33);
   text-align: center;
   letter-spacing: 1.4vh;
 }

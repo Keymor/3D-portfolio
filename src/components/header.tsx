@@ -1,7 +1,7 @@
 import Button from "./button"
 import header from "../assets/header_bottom.png"
 import headerWhite from "../assets/header_bottom_white.png"
-import logo from "../assets/logo.png"
+import logo from "/logo.png"
 
 export default function Header() {
 
