@@ -6,8 +6,7 @@ export default function Portfolio() {
     const [slide, setSlide] = useState(0)
 
     return (
-        <div className="w-screen h-screen bg-white flex flex-col inset-shadow-[0_20px_30px_rgb(0,0,0,0.3)] relative">
-            <div className="h-25" />
+        <div className="w-screen h-screen bg-white flex flex-col inset-shadow-[0_20px_30px_rgb(0,0,0,0.3)] relative pt-15 pb-2">
             <div className="flex flex-row gap-11 mt-30 mx-auto items-end z-2">
                 <ImageBox bgColor="rgb(32, 32, 32)" scale={500} positionX={-38} positionY={0} img="url(/homeImg1.jpg)" ofset={0} />
                 <ImageBox bgColor="rgb(200, 6, 6)" scale={420} positionX={-37} positionY={0} img="url(/homeImg2.jpg)" ofset={-7} />
