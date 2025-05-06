@@ -13,8 +13,8 @@ export default function Portfolio() {
                 <ImageBox bgColor="rgb(200, 6, 6)" scale={420} positionX={-37} positionY={0} img="url(/homeImg2.jpg)" ofset={-7} />
                 <ImageBox bgColor="rgb(32, 32, 32)" scale={420} positionX={-40} positionY={0} img="url(/homeImg3.jpg)" ofset={-1} />
                 <ImageBox bgColor="rgb(200, 6, 6)" scale={280} positionX={-17} positionY={-5} img="url(/sword.jpg)" ofset={-6} />
-                <div className="-translate-y-[7.5vh] h-[68vh] w-[8vw] rounded-[4rem] text-center relative">
-                    <h1 className="rotate-90 left-13 absolute justify-center w-fit origin-bottom-left fontPortfolio leading-0 whitespace-nowrap">PORTFOLIO</h1>
+                <div className="h-[75vh] w-[8vw] relativ">
+                    <h1 className="fontPortfolio whitespace-nowrap size-fit -translate-x-3/10 text-start">PORTFOLIO</h1>
                 </div>
             </div>
             <div className=" absolute bg-[url('/fig1.png')] bg-cover bottom-10 left-15 w-39 h-40 z-1" />
