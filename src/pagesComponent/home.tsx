@@ -23,21 +23,21 @@ export default function Home() {
                 <div className='bg-[url("/homeImg2.jpg")] bg-center bg-cover w-[100vw] h-[100vh]' />
                 <div className='bg-[url("/homeImg3.jpg")] bg-center bg-cover w-[100vw] h-[100vh]' />
             </div>
-            <div className="absolute top-1/2 -translate-y-1/3 right-20 flex flex-col gap-5 w-fit items-center opacity-90">
-                <div className="h-12 w-1 bg-white" />
-                <div onClick={() => setSlide(0)} className="cursor-pointer size-5 rounded-full bg-white flex">
-                    <div style={{visibility: slide === 0 ? "visible" : "hidden"}} className="size-4 rounded-full bg-gray-500 m-auto" />
+            <div className="absolute bottom-20 right-1/2 translate-x-1/2 sm:top-1/2 sm:-translate-y-1/3 sm:right-20 flex flex-row sm:flex-col gap-5 w-fit items-center opacity-80 sm:opacity-90 z-1">
+                <div className="h-12 w-1 bg-white hidden sm:block" />
+                <div onClick={() => setSlide(0)} className="cursor-pointer h-2 w-18 rounded-xs sm:size-5 sm:rounded-full bg-white flex">
+                    <div style={{visibility: slide === 0 ? "visible" : "hidden"}} className=" rounded-xs w-17 h-1.5 sm:size-4 sm:rounded-full bg-gray-500 m-auto" />
                 </div>
-                <div onClick={() => setSlide(100)} className="cursor-pointer size-5 rounded-full bg-white flex">
-                    <div style={{visibility: slide === 100 ? "visible" : "hidden"}} className="size-4 rounded-full bg-gray-500 m-auto" />
+                <div onClick={() => setSlide(100)} className="cursor-pointer h-2 w-18 rounded-xs sm:size-5 sm:rounded-full bg-white flex">
+                    <div style={{visibility: slide === 100 ? "visible" : "hidden"}} className="rounded-xs w-17 h-1.5 sm:size-4 sm:rounded-full bg-gray-500 m-auto" />
                 </div>
-                <div onClick={() => setSlide(200)} className="cursor-pointer size-5 rounded-full bg-white flex">
-                    <div style={{visibility: slide === 200 ? "visible" : "hidden"}} className="size-4 rounded-full bg-gray-500 m-auto" />
+                <div onClick={() => setSlide(200)} className="cursor-pointer h-2 w-18 rounded-xs sm:size-5 sm:rounded-full bg-white flex">
+                    <div style={{visibility: slide === 200 ? "visible" : "hidden"}} className="rounded-xs w-17 h-1.5 sm:size-4 sm:rounded-full bg-gray-500 m-auto" />
                 </div>
-                <div className="h-12 w-1 bg-white" />
+                <div className="h-12 w-1 bg-white hidden sm:block" />
             </div>
-            <div className=" absolute bottom-0 bg-[url('/figLeftBottom.png')] bg-cover size-50" />
-            <div className=" absolute top-40 right-0 bg-[url('/figRightTop.png')] bg-cover h-35 w-25" />
+            <div className=" absolute sm:bottom-0 bg-[url('/figLeftBottom.png')] -left-10 -bottom-5 -rotate-20 sm:rotate-0 sm:left-0 bg-cover size-25 sm:size-50" />
+            <div className=" absolute top-40 right-0 bg-[url('/figRightTop.png')] bg-cover h-25 w-18 sm:h-35 sm:w-25" />
         </div>
     )
 }

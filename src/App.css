@@ -18,6 +18,14 @@ body {
   writing-mode: vertical-lr;
 }
 
+.portfolioSmall {
+  font-family: "Bebas Neue", sans-serif;
+  color: rgb(33, 33, 33);
+  text-align: center;
+  letter-spacing: 1.4vh;
+  writing-mode: vertical-lr;
+}
+
 .fontContact {
   writing-mode: sideways-lr;
   font-size: 12vw;
