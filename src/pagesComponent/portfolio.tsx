@@ -1,4 +1,4 @@
-import { use, useState } from "react";
+import { useState } from "react";
 import ImageBox from "../components/imageBox";
 
 interface ImageBoxProps {
