@@ -17,7 +17,7 @@ export default function Header() {
                     <Button text="About" scrollNum={2} />
                     <Button text="Contacts" scrollNum={3} />
                 </div>
-                <div className="flex mr-10 ml-auto my-auto">Menu</div>
+                <div className="sm:hidden flex mr-10 ml-auto my-auto">Menu</div>
             </div>
             <img className="fixed h-[91px] w-[243px] scale-56 sm:scale-92 top-19.5 sm:top-28.5 -left-8 sm:left-20 z-5" src={headerWhite} alt=""></img>
         </div>
