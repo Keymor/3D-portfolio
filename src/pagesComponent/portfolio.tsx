@@ -15,7 +15,7 @@ export default function Portfolio() {
 
     const [clicked, setClicked] = useState(0)
     const [slide, setSlide] = useState(0)
-    const [globalIndex, setGlobalIndex] = useState(2)                             
+    const [globalIndex, setGlobalIndex] = useState(2)
     const [imgArray, setImgArray] = useState([
         {
             bgColor: "rgb(32, 32, 32)",
@@ -75,10 +75,6 @@ export default function Portfolio() {
             element.ofset = element.ofset + 40
             if (element.ofset > 120) {
                 element.ofset = -40
-                element.opacity = 0
-                setTimeout(() => {
-                    element.opacity = 1
-                }, 500)
             }
         });
         setImgArray(newArray)
@@ -94,10 +90,6 @@ export default function Portfolio() {
             element.ofset = element.ofset - 40
             if (element.ofset < -40) {
                 element.ofset = 120
-                element.opacity = 0
-                setTimeout(() => {
-                    element.opacity = 1
-                }, 500)
             }
         });
         setImgArray(newArray)
@@ -139,19 +131,21 @@ export default function Portfolio() {
         <div className="w-screen h-screen bg-white flex flex-col inset-shadow-[0_20px_30px_rgb(0,0,0,0.3)] relative pt-25 sm:pt-15 pb-2">
             {imagBox()}
             <div className="sm:hidden flex flex-row m-auto w-[90vw] gap-4">
-                <div className="h-[60vh] w-[65vw] overflow-clip z-5">
+                <div className="h-[60vh] w-[65vw] z-5 overflow-clip">
                     <div className="h-fit w-[65vw] relative flex flex-col -translate-y-[30vh]">
                         {imgArray.map((item: ImageBoxProps, index: number) => {
                             return (
                                 <div
-                                    style={{ transform: `translateY(${item.ofset}vh)`, backgroundColor: item.bgColor, display: item.opacity === 1 ? 'block' : 'none' }}
-                                    className=" border-3 border-white absolute sm:block h-[40vh] w-[65vw] sm:h-[68vh] sm:w-[18vw] bg-gray-500 rounded-3xl my-auto sm:my-0 sm:rounded-[4rem] text-center sm:shadow-2xl/70 hover:scale-102 duration-1000">
-                                    <button style={{zIndex:globalIndex, opacity: index === globalIndex ? 0 : 1}} disabled={globalIndex === index? true : false} onClick={() => sliderFunUp()} className=" duration-600 absolute w-full top-0 left-0 h-1/2 rounded-3xl bg-gradient-to-t from-black/80 bg-red-800/50 z-10" />
+                                    style={{ transform: `translateY(${item.ofset}vh)`, backgroundColor: item.bgColor, opacity: item.ofset < 0 || item.ofset > 80 ? 0 : 1 }}
+                                    className=" border-3 border-white absolute sm:block h-[40vh] w-[65vw] sm:h-[68vh] sm:w-[18vw] bg-gray-500 rounded-3xl my-auto sm:my-0 sm:rounded-[4rem] text-center sm:shadow-2xl/70 hover:scale-102 duration-1000"> <p className=" absolute top-1/2 z-20 left-1/2 text-red-600 text-5xl">{index}/{item.ofset}</p>
+                                    <button style={{ zIndex: globalIndex, opacity: index === globalIndex ? 0 : 1 }} disabled={globalIndex === index ? true : false} onClick={() => sliderFunUp()} className=" duration-600 absolute w-full top-0 left-0 h-1/2 rounded-3xl bg-gradient-to-t from-black/80 bg-red-800/50 z-10" />
+                                    <p style={{ zIndex: globalIndex, opacity: index === globalIndex ? 0 : 1 }} className=" absolute top-5 left-1/2 -translate-x-1/2 duration-300">/\</p>
+                                    <p style={{ zIndex: globalIndex, opacity: index === globalIndex ? 0 : 1 }} className=" absolute bottom-5 left-1/2 -translate-x-1/2 duration-300">\/</p>
                                     <img
                                         style={{ backgroundImage: item.img, backgroundPosition: `${item.positionX}vw ${item.positionY}vh`, backgroundSize: `${item.scale}%` }}
                                         alt=""
                                         className="sm:opacity-50 sm:hover:opacity-100 cursor-pointer duration-300 bg-no-repeat size-full rounded-3xl sm:rounded-[4rem] bg-cover" />
-                                    <button style={{opacity: index === globalIndex ? 0 : 1}} disabled={globalIndex === index? true : false} onClick={() => sliderFun()} className=" duration-600 absolute w-full bottom-0 left-0 h-1/2 rounded-3xl bg-gradient-to-t from-red-800/50 bg-black/80 z-1" />
+                                    <button style={{ opacity: index === globalIndex ? 0 : 1 }} disabled={globalIndex === index ? true : false} onClick={() => sliderFun()} className=" duration-600 absolute w-full bottom-0 left-0 h-1/2 rounded-3xl bg-gradient-to-t from-red-800/50 bg-black/80 z-1" />
                                 </div>
                             )
                         })}
