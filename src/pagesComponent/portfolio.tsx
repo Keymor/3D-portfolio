@@ -8,7 +8,8 @@ interface ImageBoxProps {
     positionY: number;
     img: string;
     ofset: number;
-    opacity: number
+    opacity: number;
+    w: string
 }
 
 export default function Portfolio() {
@@ -16,6 +17,7 @@ export default function Portfolio() {
     const [clicked, setClicked] = useState(0)
     const [slide, setSlide] = useState(0)
     const [globalIndex, setGlobalIndex] = useState(2)
+
     const [imgArray, setImgArray] = useState([
         {
             bgColor: "rgb(32, 32, 32)",
@@ -24,7 +26,8 @@ export default function Portfolio() {
             positionY: 0,
             img: "url(/homeImg1.jpg)",
             ofset: -40,
-            opacity: 1
+            opacity: 1,
+            w: ''
         },
         {
             bgColor: "rgb(32, 32, 32)",
@@ -33,7 +36,8 @@ export default function Portfolio() {
             positionY: 0,
             img: "url(/homeImg2.jpg)",
             ofset: 0,
-            opacity: 1
+            opacity: 1,
+            w: ''
         },
         {
             bgColor: "rgb(32, 32, 32)",
@@ -42,7 +46,8 @@ export default function Portfolio() {
             positionY: 0,
             img: "url(/homeImg3.jpg)",
             ofset: 40,
-            opacity: 1
+            opacity: 1,
+            w: ''
         },
         {
             bgColor: "rgb(32, 32, 32)",
@@ -51,7 +56,8 @@ export default function Portfolio() {
             positionY: 0,
             img: "url(/sword.jpg)",
             ofset: 80,
-            opacity: 1
+            opacity: 1,
+            w: ''
         },
         {
             bgColor: "rgb(32, 32, 32)",
@@ -60,7 +66,8 @@ export default function Portfolio() {
             positionY: 0,
             img: "url(/homeImg2.jpg)",
             ofset: 120,
-            opacity: 1
+            opacity: 1,
+            w: ''
         },
     ])
 
@@ -96,33 +103,81 @@ export default function Portfolio() {
     };
 
     const imagBox = () => {
-        const box1 = <ImageBox bgColor="rgb(32, 32, 32)" scale={500} positionX={-38} positionY={0} img="url(/homeImg1.jpg)" ofset={0} />
-        const box2 = <ImageBox bgColor="rgb(200, 6, 6)" scale={420} positionX={-37} positionY={0} img="url(/homeImg2.jpg)" ofset={-7} />
-        const box3 = <ImageBox bgColor="rgb(32, 32, 32)" scale={420} positionX={-40} positionY={0} img="url(/homeImg3.jpg)" ofset={-1} />
-        const box4 = <ImageBox bgColor="rgb(200, 6, 6)" scale={280} positionX={-17} positionY={-5} img="url(/sword.jpg)" ofset={-6} />
+        const box1 = <ImageBox
+            w={clicked === 1 ? '80vw' : clicked === 0 ? '' : '0vw'}
+            bgColor="rgb(32, 32, 32)"
+            scale={clicked === 1 ? 100 : 500}
+            positionX={clicked === 1 ? 0 : -38}
+            positionY={0}
+            img="url(/homeImg1.jpg)"
+            ofset={0} />
+        const box2 = <ImageBox
+            w={clicked === 2 ? '80vw' : clicked === 0 ? '' : '0vw'}
+            bgColor="rgb(200, 6, 6)"
+            scale={clicked === 2 ? 100 : 420}
+            positionX={clicked === 2 ? 0 : -37}
+            positionY={0}
+            img="url(/homeImg2.jpg)"
+            ofset={clicked === 2 ? 0 : -7} />
+        const box3 = <ImageBox
+            w={clicked === 3 ? '80vw' : clicked === 0 ? '' : '0vw'}
+            bgColor="rgb(32, 32, 32)"
+            scale={clicked === 3 ? 100 : 420}
+            positionX={clicked === 3 ? 0 : -40}
+            positionY={0}
+            img="url(/homeImg3.jpg)"
+            ofset={clicked === 3 ? 0 : -1} />
+        const box4 = <ImageBox
+            w={clicked === 4 ? '80vw' : clicked === 0 ? '' : '0vw'}
+            bgColor="rgb(200, 6, 6)"
+            scale={clicked === 4 ? 100 : 280}
+            positionX={clicked === 4 ? 0 : -17}
+            positionY={-5}
+            img="url(/sword.jpg)"
+            ofset={clicked === 4 ? 0 : -6} />
 
         return (
-            <div className="hidden sm:flex flex-row gap-11 mt-30 mx-auto items-end z-2">
+            <div
+                className="h-[50vw] xl:h-[68vh] hidden sm:flex sm:flex-row mt-40 mx-auto px-1">
                 <div
-                    className=" duration-300"
-                    style={clicked === 1 || clicked === 0 ? { opacity: 1 } : { opacity: 0 }}
-                    onClick={() => setClicked(1)}>{box1}</div>
+                    className="flex duration-300 z-3 h-fit mx-1 xl:mx-5 hover:scale-102"
+                    style={clicked === 1 || clicked === 0 ? { opacity: 1 } : { opacity: 0, zIndex: 1, margin: 0 }}
+                    onClick={() => clicked > 0 ? setClicked(0) : setClicked(1)}>{box1}</div>
+                <div style={clicked === 1 ? { width: '15vw', opacity: 1 } : {}} className="opacity-0 text-black text-center py-10 w-[0vw] h-[40vh] wrap-break-word z-5 duration-500">
+                    <h1 className="text-4xl font-bold">HEADER</h1>
+                    <p className="text-xl mt-10">lkamsdlkaskdn kjasndlkjans jknasdjk asd aljsndjajs d ajksdnlkjansdk aks dkljasmdma sd,k as dajsdhajshd ,jas d,jah sdjah sdansdklj asd ajk s</p>
+                </div>
                 <div
-                    className=" duration-300"
-                    style={clicked === 2 || clicked === 0 ? { opacity: 1 } : { opacity: 0 }}
-                    onClick={() => setClicked(2)}>{box2}</div>
+                    className="flex duration-300 z-3 h-fit mx-1 xl:mx-5 hover:scale-102"
+                    style={clicked === 2 || clicked === 0 ? { opacity: 1 } : { opacity: 0, zIndex: 1, margin: 0 }}
+                    onClick={() => clicked > 0 ? setClicked(0) : setClicked(2)}>{box2}
+                    <div style={clicked === 2 ? { width: '15vw', opacity: 1 } : {}} className="opacity-0 text-black text-center py-10 w-[0vw] h-[40vh] wrap-break-word z-5 duration-500">
+                        <h1 className="text-4xl font-bold">HEADER</h1>
+                        <p className="text-xl mt-10">lkamsdlkaskdn kjasndlkjans jknasdjk asd aljsndjajs d ajksdnlkjansdk aks dkljasmdma sd,k as dajsdhajshd ,jas d,jah sdjah sdansdklj asd ajk s</p>
+                    </div>
+                </div>
                 <div
-                    className=" duration-300"
-                    style={clicked === 3 || clicked === 0 ? { opacity: 1 } : { opacity: 0 }}
-                    onClick={() => setClicked(3)}>{box3}</div>
+                    className="flex duration-300 z-3 h-fit mx-1 xl:mx-5 hover:scale-102"
+                    style={clicked === 3 || clicked === 0 ? { opacity: 1 } : { opacity: 0, zIndex: 1, margin: 0 }}
+                    onClick={() => clicked > 0 ? setClicked(0) : setClicked(3)}>{box3}
+                    <div style={clicked === 3 ? { width: '15vw', opacity: 1 } : {}} className="opacity-0 text-black text-center py-10 w-[0vw] h-[40vh] wrap-break-word z-5 duration-500">
+                        <h1 className="text-4xl font-bold">HEADER</h1>
+                        <p className="text-xl mt-10">lkamsdlkaskdn kjasndlkjans jknasdjk asd aljsndjajs d ajksdnlkjansdk aks dkljasmdma sd,k as dajsdhajshd ,jas d,jah sdjah sdansdklj asd ajk s</p>
+                    </div>
+                </div>
                 <div
-                    className=" duration-300"
-                    style={clicked === 4 || clicked === 0 ? { opacity: 1 } : { opacity: 0 }}
-                    onClick={() => setClicked(4)}>{box4}</div>
-                {/* <div onClick={() => setClicked(0)} className="bg-amber-300 absolute -translate-x-[6vw] translate-y-[11.5vh] w-screen h-screen -z-1" /> */}
-                <div className="h-[75vh] w-[8vw] relativ">
+                    className="flex duration-300 z-3 h-fit mx-1 xl:mx-5 hover:scale-102"
+                    style={clicked === 4 || clicked === 0 ? { opacity: 1 } : { opacity: 0, zIndex: 1, margin: 0 }}
+                    onClick={() => clicked > 0 ? setClicked(0) : setClicked(4)}>{box4}
+                    <div style={clicked === 4 ? { width: '15vw', opacity: 1 } : {}} className="opacity-0 text-black text-center py-10 w-[0vw] h-[40vh] wrap-break-word z-5 duration-500">
+                        <h1 className="text-4xl font-bold">HEADER</h1>
+                        <p className="text-xl mt-10">lkamsdlkaskdn kjasndlkjans jknasdjk asd aljsndjajs d ajksdnlkjansdk aks dkljasmdma sd,k as dajsdhajshd ,jas d,jah sdjah sdansdklj asd ajk s</p>
+                    </div>
+                </div>
+                <div className="flex h-[75vh] w-[8vw] z-1">
                     <h1 className="fontPortfolio whitespace-nowrap size-fit -translate-x-3/10 text-start">PORTFOLIO</h1>
                 </div>
+                <div onClick={() => setClicked(0)} className="h-screen w-screen absolute inset-0 z-2" />
             </div>
         )
     }
@@ -137,7 +192,7 @@ export default function Portfolio() {
                             return (
                                 <div
                                     style={{ transform: `translateY(${item.ofset}vh)`, backgroundColor: item.bgColor, opacity: item.ofset < 0 || item.ofset > 80 ? 0 : 1 }}
-                                    className=" border-3 border-white absolute sm:block h-[40vh] w-[65vw] sm:h-[68vh] sm:w-[18vw] bg-gray-500 rounded-3xl my-auto sm:my-0 sm:rounded-[4rem] text-center sm:shadow-2xl/70 hover:scale-102 duration-1000"> <p className=" absolute top-1/2 z-20 left-1/2 text-red-600 text-5xl">{index}/{item.ofset}</p>
+                                    className=" border-3 border-white absolute sm:block h-[40vh] w-[65vw] sm:h-[68vh] sm:w-[18vw] bg-gray-500 rounded-3xl my-auto sm:my-0 sm:rounded-[4rem] text-center sm:shadow-2xl/70 duration-1000"> <p className=" absolute top-1/2 z-20 left-1/2 text-red-600 text-5xl">{index}/{item.ofset}</p>
                                     <button style={{ zIndex: globalIndex, opacity: index === globalIndex ? 0 : 1 }} disabled={globalIndex === index ? true : false} onClick={() => sliderFunUp()} className=" duration-600 absolute w-full top-0 left-0 h-1/2 rounded-3xl bg-gradient-to-t from-black/80 bg-red-800/50 z-10" />
                                     <p style={{ zIndex: globalIndex, opacity: index === globalIndex ? 0 : 1 }} className=" absolute top-5 left-1/2 -translate-x-1/2 duration-300">/\</p>
                                     <p style={{ zIndex: globalIndex, opacity: index === globalIndex ? 0 : 1 }} className=" absolute bottom-5 left-1/2 -translate-x-1/2 duration-300">\/</p>
@@ -160,7 +215,7 @@ export default function Portfolio() {
             <div className=" absolute bg-[url('/fig3.png')] bg-no-repeat bg-contain -bottom-20 size-60 z-0" />
             <div className=" absolute bg-[url('/fig4.png')] bg-no-repeat bg-contain top-10 sm:top-34 right-3/10 size-37 z-0" />
             <div className=" absolute bg-[url('/fig5.png')] bg-no-repeat bg-contain top-10 right-0 h-45 w-30 z-0" />
-            <div className=" hidden m-auto sm:flex flex-row gap-5 w-fit items-center opacity-90">
+            <div className=" hidden sm:flex flex-row m-auto gap-5 w-fit items-center opacity-90">
                 <div className="h-1 w-12 bg-black" />
                 <div onClick={() => setSlide(0)} className="cursor-pointer size-6 rounded-full bg-black flex">
                     <div style={{ visibility: slide === 0 ? "visible" : "hidden" }} className="size-5 rounded-full bg-gray-400 m-auto" />

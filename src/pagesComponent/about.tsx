@@ -3,7 +3,7 @@ export default function About() {
         <div className="w-screen h-screen bg-[rgb(40,36,33,1)] flex flex-row relative pt-30">
             <div className="flex flex-col gap-[5vh] m-auto z-1">
                 <div className="relative">
-                    <h1 className="text-9xl font-bold fontAbout text-white z-9 relative">ABOUT ME</h1>
+                    <h1 className="text-[12rem] font-bold fontAbout text-white z-9 relative">ABOUT ME</h1>
                     <div className="absolute bg-no-repeat -top-20 left-140 size-50 bg-contain bg-[url('/figP1.png')] z-1" />
                 </div>
                 <p style={{ letterSpacing: '0.1rem', lineHeight: '1.6rem' }} className="w-[45vw] h-[32vh] text-white fontFam">
