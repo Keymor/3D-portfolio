@@ -87,7 +87,7 @@ export default function Contact() {
                     </a>
                 </div>
             </div>
-            <div className=" bg-[url('/logoBig.png')] h-[45vh] w-[27vw] absolute bottom-0 right-1/9 bg-no-repeat bg-cover opacity-25 z-0" />
+            <div className=" bg-[url('/logoBig.png')] h-[45vh] w-[60vw] sm:w-[27vw] absolute bottom-0 right-0 sm:right-1/9 bg-no-repeat bg-cover opacity-25 z-0" />
             <div className="bg-[url('/figCont.png')] scale-70 sm:scale-100 h-50 w-80 absolute top-11/13 right-1/2 sm:top-[20vh] sm:right-0 bg-no-repeat" />
             <div className="w-full h-10"/>
         </div>
