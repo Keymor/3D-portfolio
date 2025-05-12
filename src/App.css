@@ -11,11 +11,14 @@ body {
 
 .fontPortfolio, .fontContact{
   font-family: "Bebas Neue", sans-serif;
-  font-size: 10vw;
   color: rgb(33, 33, 33);
   text-align: center;
   letter-spacing: 1.4vh;
   writing-mode: vertical-lr;
+}
+
+.fontPortfolio {
+  font-size: 10vw;
 }
 
 .portfolioSmall {
@@ -30,7 +33,6 @@ body {
 
 .fontContact {
   writing-mode: sideways-lr;
-  font-size: 12vw;
 }
 
 .fontAbout {
@@ -42,15 +44,12 @@ body {
   position: absolute;
   bottom: 0.8rem;
   left: 0;
+  bottom: -0.1rem;
   transform: translateX(-75%);
   content: '';
   height: 0.2rem;
   width: 200%;
   background-color: white;
-}
-
-.fontFam {
-  font-size: 1.4rem;
 }
 
 .cliper {
