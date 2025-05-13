@@ -91,5 +91,6 @@ export default function Contact() {
             <div className="bg-[url('/figCont.png')] scale-70 sm:scale-100 h-50 w-80 absolute top-11/13 right-1/2 sm:top-[20vh] sm:right-0 bg-no-repeat" />
             <div className="w-full h-10"/>
         </div>
+        //commit
     )
 }
