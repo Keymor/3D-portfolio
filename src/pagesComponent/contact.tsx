@@ -37,34 +37,34 @@ export default function Contact() {
             <div className="flex flex-col sm:flex-row relative mt-22 sm:my-auto pt-25 z-1">
                 <div className="flex flex-row ml-[35vw] sm:ml-[25%] relative">
                     <form ref={form} onSubmit={sendEmail} className="w-fit h-[50vh] my-auto sm:gap-20 flex flex-col">
-                        <div style={{ letterSpacing: '0.1rem' }} className="w-fit gap-x-[5vw] gap-y-2 sm:gap-y-15 h-2/3 grid sm:grid-cols-2 grid-cols">
+                        <div style={{ letterSpacing: '0.1rem' }} className="w-fit gap-x-[5vw] gap-y-1 sm:gap-y-15 h-2/3 grid sm:grid-cols-2 grid-cols">
                             <div className="w-fit h-fit flex flex-col fontFamLogo gap-1">
                                 <h2>Name *</h2>
-                                <input required name="name" type="text" className="outline-0"></input>
+                                <input required name="name" type="text" className="outline-0 h-4 sm:h-6"></input>
                                 <div className="w-[60vw] sm:w-[15vw] h-0.5 bg-white" />
                             </div>
                             <div className="w-fit h-fit flex flex-col fontFamLogo gap-1">
                                 <h2>Company</h2>
-                                <input name='company' type="text" className="outline-0"></input>
+                                <input name='company' type="text" className="outline-0 h-4 sm:h-6"></input>
                                 <div className="w-[60vw] sm:w-[15vw] h-0.5 bg-white" />
                             </div>
                             <div className="w-fit h-fit flex flex-col fontFamLogo gap-1">
                                 <h2>E-mail *</h2>
-                                <input required name="email" type="email" className="outline-0"></input>
+                                <input required name="email" type="email" className="outline-0 h-4 sm:h-6"></input>
                                 <div className="w-[60vw] sm:w-[15vw] h-0.5 bg-white" />
                             </div>
                             <div className="w-fit h-fit flex flex-col fontFamLogo gap-1">
                                 <h2>Phone</h2>
-                                <input name="phone" type="text" className="outline-0"></input>
+                                <input name="phone" type="text" className="outline-0 h-4 sm:h-6"></input>
                                 <div className="w-[60vw] sm:w-[15vw] h-0.5 bg-white" />
                             </div>
                         </div>
-                        <div className="w-[60vw] sm:w-[35vw] h-fit flex flex-col fontFamLogo gap-3 mt-15 sm:my-auto z-1">
+                        <div className="w-[60vw] sm:w-[35vw] h-fit flex flex-col fontFamLogo gap-3 mt-2 sm:mt-15 sm:my-auto z-1">
                             <h2>Whant to know more? Drop us a line.</h2>
-                            <input name='lineField' type="text" className="outline-0"></input>
+                            <input name='lineField' type="text" className="outline-0 h-4 sm:h-6"></input>
                             <div className="w-full h-0.5 bg-white z-1" />
                         </div>
-                        <button type="submit" className="sm:p-3 p-2 min-w-38 mx-auto mt-5 sm:ml-auto sm:mr-20  bg-[rgb(33,33,33)] rounded-4xl cursor-pointer flex flex-row z-10">
+                        <button type="submit" className="sm:p-3 p-2 min-w-38 mx-auto my-3 sm:mt-5 sm:ml-auto sm:mr-20  bg-[rgb(33,33,33)] rounded-4xl cursor-pointer flex flex-row z-10">
                             <div className="size-9 rounded-full bg-amber-50 my-auto flex" >
                                 <div className="size-8 bg-red-800 rounded-full m-auto" />
                             </div>
