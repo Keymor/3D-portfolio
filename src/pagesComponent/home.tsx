@@ -17,7 +17,7 @@ export default function Home() {
     }, [slide])
 
     return (
-        <div className="w-screen h-[100svh] bg-gray-500 flex m-auto relative">
+        <div className="w-screen h-[100dvh] bg-gray-500 flex m-auto relative">
             <div style={{ transform: `translateX(-${slide}vw)` }} className="w-[300vw] h-[100vh] inline-flex duration-1000">
                 <div className='bg-[url("/homeImg1.jpg")] bg-center bg-cover w-[100vw] h-[100vh]' />
                 <div className='bg-[url("/homeImg2.jpg")] bg-center bg-cover w-[100vw] h-[100vh]' />
