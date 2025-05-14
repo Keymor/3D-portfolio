@@ -5,7 +5,7 @@ import logo from "/logo.png"
 import { useState } from "react"
 
 export default function Header() {
-    const [slide, setSlide] = useState(false)
+    const [slide, setSlide] = useState(true)
 
     return (
         <div className="fixed w-full h-20 sm:h-25 flex z-10">
