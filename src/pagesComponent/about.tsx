@@ -1,6 +1,6 @@
 export default function About() {
     return (
-        <div className="w-screen h-screen bg-[rgb(40,36,33,1)] flex flex-col sm:flex-row relative pt-30">
+        <div className="w-screen h-[100dvh] bg-[rgb(40,36,33,1)] flex flex-col sm:flex-row relative pt-30">
             <div className="flex flex-col gap-1 sm:gap-[5vh] m-auto z-1">
                 <div className=" relative flex">
                     <h1 className="text-7xl sm:text-[12rem] font-bold fontAbout text-white z-9 relative">ABOUT ME</h1>
