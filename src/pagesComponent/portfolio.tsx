@@ -17,14 +17,14 @@ export default function Portfolio() {
     const [clicked, setClicked] = useState(0)
     const [clicedAction, setClickedAction] = useState(false)
     const [slide, setSlide] = useState(0)
-    const [globalIndex, setGlobalIndex] = useState(2)
+    // const [globalIndex, setGlobalIndex] = useState(2)
     const [hover, setHover] = useState(0)
 
-    const [imgArray, setImgArray] = useState([
+    const imgArray = [
         {
             bgColor: "rgb(32, 32, 32)",
-            scale: 282,
-            positionX: -50,
+            scale: 500,
+            positionX: -85,
             positionY: 0,
             img: "url(/homeImg1.jpg)",
             ofset: -40,
@@ -53,7 +53,7 @@ export default function Portfolio() {
         },
         {
             bgColor: "rgb(32, 32, 32)",
-            scale: 150,
+            scale: 200,
             positionX: -18,
             positionY: 0,
             img: "url(/sword.jpg)",
@@ -63,7 +63,7 @@ export default function Portfolio() {
         },
         {
             bgColor: "rgb(32, 32, 32)",
-            scale: 250,
+            scale: 350,
             positionX: -38,
             positionY: 0,
             img: "url(/homeImg2.jpg)",
@@ -71,38 +71,90 @@ export default function Portfolio() {
             opacity: 1,
             w: ''
         },
-    ])
+    ]
+    // const [imgArray, setImgArray] = useState([
+    //     {
+    //         bgColor: "rgb(32, 32, 32)",
+    //         scale: 500,
+    //         positionX: -85,
+    //         positionY: 0,
+    //         img: "url(/homeImg1.jpg)",
+    //         ofset: -40,
+    //         opacity: 1,
+    //         w: ''
+    //     },
+    //     {
+    //         bgColor: "rgb(32, 32, 32)",
+    //         scale: 292,
+    //         positionX: -50,
+    //         positionY: 0,
+    //         img: "url(/homeImg2.jpg)",
+    //         ofset: 0,
+    //         opacity: 1,
+    //         w: ''
+    //     },
+    //     {
+    //         bgColor: "rgb(32, 32, 32)",
+    //         scale: 250,
+    //         positionX: -38,
+    //         positionY: 0,
+    //         img: "url(/homeImg3.jpg)",
+    //         ofset: 40,
+    //         opacity: 1,
+    //         w: ''
+    //     },
+    //     {
+    //         bgColor: "rgb(32, 32, 32)",
+    //         scale: 150,
+    //         positionX: -18,
+    //         positionY: 0,
+    //         img: "url(/sword.jpg)",
+    //         ofset: 80,
+    //         opacity: 1,
+    //         w: ''
+    //     },
+    //     {
+    //         bgColor: "rgb(32, 32, 32)",
+    //         scale: 250,
+    //         positionX: -38,
+    //         positionY: 0,
+    //         img: "url(/homeImg2.jpg)",
+    //         ofset: 120,
+    //         opacity: 1,
+    //         w: ''
+    //     },
+    // ])
 
-    const sliderFun = () => {
-        if (globalIndex === 0) {
-            setGlobalIndex(4)
-        } else {
-            setGlobalIndex(globalIndex - 1)
-        }
-        let newArray = [...imgArray]
-        newArray.forEach(element => {
-            element.ofset = element.ofset + 40
-            if (element.ofset > 120) {
-                element.ofset = -40
-            }
-        });
-        setImgArray(newArray)
-    };
-    const sliderFunUp = () => {
-        if (globalIndex === 4) {
-            setGlobalIndex(0)
-        } else {
-            setGlobalIndex(globalIndex + 1)
-        }
-        let newArray = [...imgArray]
-        newArray.forEach(element => {
-            element.ofset = element.ofset - 40
-            if (element.ofset < -40) {
-                element.ofset = 120
-            }
-        });
-        setImgArray(newArray)
-    };
+    // const sliderFun = () => {
+    //     if (globalIndex === 0) {
+    //         setGlobalIndex(4)
+    //     } else {
+    //         setGlobalIndex(globalIndex - 1)
+    //     }
+    //     let newArray = [...imgArray]
+    //     newArray.forEach(element => {
+    //         element.ofset = element.ofset + 40
+    //         if (element.ofset > 120) {
+    //             element.ofset = -40
+    //         }
+    //     });
+    //     setImgArray(newArray)
+    // };
+    // const sliderFunUp = () => {
+    //     if (globalIndex === 4) {
+    //         setGlobalIndex(0)
+    //     } else {
+    //         setGlobalIndex(globalIndex + 1)
+    //     }
+    //     let newArray = [...imgArray]
+    //     newArray.forEach(element => {
+    //         element.ofset = element.ofset - 40
+    //         if (element.ofset < -40) {
+    //             element.ofset = 120
+    //         }
+    //     });
+    //     setImgArray(newArray)
+    // };
 
     const imagBox = () => {
         const box1 = <ImageBox
@@ -113,7 +165,7 @@ export default function Portfolio() {
             positionY={0}
             img="url(/homeImg1.jpg)"
             ofset={0}
-            opacity={hover === 1 || clicked === 1 ? 1 : 1/2} />
+            opacity={hover === 1 || clicked === 1 ? 1 : 1 / 2} />
         const box2 = <ImageBox
             w={clicked === 2 ? '80vw' : clicked === 0 ? '' : '0vw'}
             bgColor="rgb(200, 6, 6)"
@@ -122,7 +174,7 @@ export default function Portfolio() {
             positionY={0}
             img="url(/homeImg2.jpg)"
             ofset={clicked === 2 ? 0 : -7}
-            opacity={hover === 2 || clicked === 2 ? 1 : 1/2} />
+            opacity={hover === 2 || clicked === 2 ? 1 : 1 / 2} />
         const box3 = <ImageBox
             w={clicked === 3 ? '80vw' : clicked === 0 ? '' : '0vw'}
             bgColor="rgb(32, 32, 32)"
@@ -131,7 +183,7 @@ export default function Portfolio() {
             positionY={0}
             img="url(/homeImg3.jpg)"
             ofset={clicked === 3 ? 0 : -1}
-            opacity={hover === 3 || clicked === 3 ? 1 : 1/2} />
+            opacity={hover === 3 || clicked === 3 ? 1 : 1 / 2} />
         const box4 = <ImageBox
             w={clicked === 4 ? '80vw' : clicked === 0 ? '' : '0vw'}
             bgColor="rgb(200, 6, 6)"
@@ -140,7 +192,7 @@ export default function Portfolio() {
             positionY={-5}
             img="url(/sword.jpg)"
             ofset={clicked === 4 ? 0 : -6}
-            opacity={hover === 4 || clicked === 4 ? 1 : 1/2} />
+            opacity={hover === 4 || clicked === 4 ? 1 : 1 / 2} />
 
         return (
             <div
@@ -226,8 +278,40 @@ export default function Portfolio() {
 
     return (
         <div className="w-screen h-screen bg-white flex flex-col inset-shadow-[0_20px_30px_rgb(0,0,0,0.3)] relative pt-25 sm:pt-15 pb-2">
+            <div style={{ opacity: clicedAction ? 1 : 0 }} className="z-1 bg-gray-800/50 size-full absolute inset-0 duration-300" />
             {imagBox()}
-            <div className="sm:hidden flex flex-row m-auto w-[90vw] gap-4">
+            <div className=" sm:hidden w-9/10 mx-auto mt-15 flex flex-col flex-wrap h-9/10 z-5 duration-300 relative">
+                <div
+                    onClick={() => setClickedAction(!clicedAction)}
+                    style={{ opacity: clicedAction ? 1 : 0, zIndex: clicedAction ? 5 : 0, width: clicedAction ? '105%' : '', height: clicedAction ? '105%' : '' }}
+                    className="left-1/2 top-1/2 -translate-1/2 absolute flex flex-col size-9/10 duration-300 bg-gray-300 rounded-2xl">
+                    <img
+                        style={{ backgroundImage: imgArray[clicked].img }}
+                        className="bg-cover w-full h-2/3 bg-no-repeat rounded-t-2xl"
+                    />
+                    <div className="p-5 bg-white h-1/3 rounded-b-2xl">
+                        <h1 className="text-black text-center font-bold text-3xl">Some text</h1>
+                        <p className="text-black text-center text-2xl">aaosmmdkmaskdmalk sa dlkja sdljk alsjd alksjd akjsdklas d alksjd klad  klajs  dlksm</p>
+                    </div>
+                </div>
+                {imgArray.map((item: ImageBoxProps, index: number) => {
+                    return (
+                        <div
+                            style={{
+                                flexGrow: 1,
+                                backgroundColor: item.bgColor,
+                            }}
+                            className=" border-3 border-white h-3/10 w-5/10 bg-gray-500 rounded-3xl text-center duration-1000 z-1">
+                            <img
+                                onClick={() => { setClicked(index), setClickedAction(!clicedAction) }}
+                                style={{ backgroundImage: item.img, backgroundPosition: `${item.positionX}vw ${item.positionY}vh`, backgroundSize: `${item.scale}%` }}
+                                alt=""
+                                className="cursor-pointer duration-300 bg-no-repeat size-full rounded-3xl bg-cover" />
+                        </div>
+                    )
+                })}
+            </div>
+            {/* <div className="sm:hidden flex flex-row m-auto w-[90vw] gap-4">
                 <div style={{overflow: clicedAction ? '' : 'clip'}} className="h-[60vh] w-[65vw] z-5">
                     <div className="h-fit w-[65vw] relative flex flex-col -translate-y-[30vh]">
                         {imgArray.map((item: ImageBoxProps, index: number) => {
@@ -258,7 +342,7 @@ export default function Portfolio() {
                 <div className="h-[75vh] w-[8vw] relativ">
                     <h1 className="portfolioSmall scale-110 text-9xl translate-y-5">PORTFOLIO</h1>
                 </div>
-            </div>
+            </div> */}
             <div className=" absolute bg-[url('/fig1.png')] bg-cover bottom-10 left-15 w-39 h-40 z-1" />
             <div className=" absolute bg-[url('/fig2.png')] bg-no-repeat bg-contain bottom-10 right-20 size-22 z-0" />
             <div className=" absolute bg-[url('/fig3.png')] bg-no-repeat bg-contain -bottom-20 size-60 z-0" />

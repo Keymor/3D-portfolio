@@ -1,9 +1,9 @@
 export default function About() {
     return (
         <div className="w-screen h-screen bg-[rgb(40,36,33,1)] flex flex-col sm:flex-row relative pt-30">
-            <div className="flex flex-col gap-[5vh] m-auto z-1">
+            <div className="flex flex-col gap-1 sm:gap-[5vh] m-auto z-1">
                 <div className=" relative flex">
-                    <h1 className="text-8xl sm:text-[12rem] font-bold fontAbout text-white z-9 relative">ABOUT ME</h1>
+                    <h1 className="text-7xl sm:text-[12rem] font-bold fontAbout text-white z-9 relative">ABOUT ME</h1>
                     <div className="absolute bg-no-repeat sm:-top-20 sm:left-140 sm:size-50 size-20 left-80 -top-10 bg-contain bg-[url('/figP1.png')] z-1" />
                 </div>
                 <p className=" tracking-tight leading-4.5 sm:leading-[1.6rem] flex w-[90vw] line sm:w-[45vw] h-fit text-white fontFam">
