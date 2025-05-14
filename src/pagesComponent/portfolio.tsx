@@ -277,7 +277,7 @@ export default function Portfolio() {
     }
 
     return (
-        <div className="w-screen h-[100dvh] bg-white flex flex-col inset-shadow-[0_20px_30px_rgb(0,0,0,0.3)] relative pt-25 sm:pt-15 pb-2">
+        <div className="w-screen h-[100svh] bg-white flex flex-col inset-shadow-[0_20px_30px_rgb(0,0,0,0.3)] relative pt-25 sm:pt-15 pb-2">
             <div style={{ opacity: clicedAction ? 1 : 0 }} className="z-1 bg-gray-800/50 size-full absolute inset-0 duration-300" />
             {imagBox()}
             <div className=" sm:hidden w-9/10 mx-auto mt-15 flex flex-col flex-wrap h-9/10 z-5 duration-300 relative">

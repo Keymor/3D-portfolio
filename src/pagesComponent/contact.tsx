@@ -28,7 +28,7 @@ export default function Contact() {
     };
 
     return (
-        <div className="w-screen h-[100dvh] bg-[rgb(221,11,20)] flex flex-col relative">
+        <div className="w-screen h-[100svh] bg-[rgb(221,11,20)] flex flex-col relative">
             <div className=" absolute top-0 left-0 w-full h-25 sm:h-30 bg-white" />
             <img className="absolute h-[91px] w-[243px] scale-55 sm:scale-92 top-18 sm:top-28 -left-8 sm:left-20 z-9" src={headerWhite} alt=""></img>
             <div className="sm:w-[220px] w-[40vw] h-[60vh] my-auto sm:ml-23 absolute top-1/6 sm:top-1/4 left-0">
