@@ -9,12 +9,18 @@ body {
   font-weight: 600;
 }
 
-.fontPortfolio, .fontContact{
+.fontPortfolio, .fontContact {
   font-family: "Bebas Neue", sans-serif;
   color: rgb(33, 33, 33);
   text-align: center;
   letter-spacing: 1.4vh;
   writing-mode: vertical-lr;
+}
+
+.fontPortfolioMob {
+  font-family: "Bebas Neue", sans-serif;
+  writing-mode: horizontal-tb;
+  font-size: clamp( 1rem, 10vw, 4rem);
 }
 
 .fontPortfolio {

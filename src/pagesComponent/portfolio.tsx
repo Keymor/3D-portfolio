@@ -281,6 +281,7 @@ export default function Portfolio() {
             <div style={{ opacity: clicedAction ? 1 : 0 }} className="z-1 bg-gray-800/50 size-full absolute inset-0 duration-300" />
             {imagBox()}
             <div className=" sm:hidden w-9/10 mx-auto mt-15 flex flex-col flex-wrap h-9/10 z-5 duration-300 relative">
+                    <h1 className="fontPortfolioMob text-black tracking-widest mx-auto">PORTFOLIO</h1>
                 <div
                     onClick={() => setClickedAction(!clicedAction)}
                     style={{ opacity: clicedAction ? 1 : 0, zIndex: clicedAction ? 5 : 0, width: clicedAction ? '105%' : '', height: clicedAction ? '105%' : '' }}
@@ -346,7 +347,7 @@ export default function Portfolio() {
             <div className=" absolute bg-[url('/fig1.png')] bg-cover bottom-10 left-15 w-39 h-40 z-1" />
             <div className=" absolute bg-[url('/fig2.png')] bg-no-repeat bg-contain bottom-10 right-20 size-22 z-0" />
             <div className=" absolute bg-[url('/fig3.png')] bg-no-repeat bg-contain -bottom-20 size-60 z-0" />
-            <div className=" absolute bg-[url('/fig4.png')] bg-no-repeat bg-contain top-10 sm:top-34 right-3/10 size-37 z-0" />
+            <div className=" absolute bg-[url('/fig4.png')] bg-no-repeat bg-contain top-5 sm:top-34 right-3/10 size-37 z-0" />
             <div className=" absolute bg-[url('/fig5.png')] bg-no-repeat bg-contain top-10 right-0 h-45 w-30 z-0" />
             <div className=" hidden sm:flex flex-row m-auto gap-5 w-fit items-center opacity-90">
                 <div className="h-1 w-12 bg-black" />
