@@ -287,7 +287,10 @@ export default function Portfolio() {
                     style={{ opacity: clicedAction ? 1 : 0, zIndex: clicedAction ? 5 : 0, width: clicedAction ? '105%' : '', height: clicedAction ? '105%' : '' }}
                     className="left-1/2 top-1/2 -translate-1/2 absolute flex flex-col size-9/10 duration-300 bg-gray-300 rounded-2xl">
                     <img
-                        style={{ backgroundImage: imgArray[clicked].img }}
+                        style={{ 
+                            backgroundImage: imgArray[clicked].img, 
+                            backgroundPositionX: clicked === 2 ? '-60vw' : `${imgArray[clicked].positionX + 20}vw`
+                        }}
                         className="bg-cover w-full h-2/3 bg-no-repeat rounded-t-2xl"
                     />
                     <div className="p-5 bg-white h-1/3 rounded-b-2xl">
