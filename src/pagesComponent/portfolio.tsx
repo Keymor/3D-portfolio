@@ -16,7 +16,7 @@ export default function Portfolio() {
 
     const [clicked, setClicked] = useState(0)
     const [clicedAction, setClickedAction] = useState(false)
-    const [slide, setSlide] = useState(0)
+    // const [slide, setSlide] = useState(0)
     // const [globalIndex, setGlobalIndex] = useState(2)
     const [hover, setHover] = useState(0)
 
