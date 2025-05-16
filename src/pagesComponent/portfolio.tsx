@@ -205,7 +205,8 @@ export default function Portfolio() {
                     }}
                     onMouseEnter={() => setHover(1)}
                     onMouseLeave={() => setHover(0)}
-                    onClick={() => clicked > 0 ? setClicked(0) : setClicked(1)}>{box1}</div>
+                    onClick={() => clicked > 0 ? setClicked(0) : setClicked(1)}>{box1}
+                </div>
                 <div
                     style={clicked === 1 ? { width: '15vw', opacity: 1 } : {}}
                     className="opacity-0 text-black text-center py-10 w-[0vw] h-[40vh] wrap-break-word z-5 duration-500">
@@ -281,14 +282,14 @@ export default function Portfolio() {
             <div style={{ opacity: clicedAction ? 1 : 0 }} className="z-1 bg-gray-800/50 size-full absolute inset-0 duration-300" />
             {imagBox()}
             <div className=" sm:hidden w-9/10 mx-auto mt-15 flex flex-col flex-wrap h-9/10 z-5 duration-300 relative">
-                    <h1 className="fontPortfolioMob text-black tracking-widest mx-auto">PORTFOLIO</h1>
+                <h1 className="fontPortfolioMob text-black tracking-widest mx-auto">PORTFOLIO</h1>
                 <div
                     onClick={() => setClickedAction(!clicedAction)}
                     style={{ opacity: clicedAction ? 1 : 0, zIndex: clicedAction ? 5 : 0, width: clicedAction ? '105%' : '', height: clicedAction ? '105%' : '' }}
                     className="left-1/2 top-1/2 -translate-1/2 absolute flex flex-col size-9/10 duration-300 bg-gray-300 rounded-2xl">
                     <img
-                        style={{ 
-                            backgroundImage: imgArray[clicked].img, 
+                        style={{
+                            backgroundImage: imgArray[clicked].img,
                             backgroundPositionX: clicked === 2 ? '-60vw' : `${imgArray[clicked].positionX + 20}vw`
                         }}
                         className="bg-cover w-full h-2/3 bg-no-repeat rounded-t-2xl"
@@ -352,7 +353,7 @@ export default function Portfolio() {
             <div className=" absolute bg-[url('/fig3.png')] bg-no-repeat bg-contain -bottom-20 size-60 z-0" />
             <div className=" absolute bg-[url('/fig4.png')] bg-no-repeat bg-contain top-5 sm:top-34 right-3/10 size-37 z-0" />
             <div className=" absolute bg-[url('/fig5.png')] bg-no-repeat bg-contain top-10 right-0 h-45 w-30 z-0" />
-            <div className=" hidden sm:flex flex-row m-auto gap-5 w-fit items-center opacity-90">
+            {/* <div className=" hidden sm:flex flex-row m-auto gap-5 w-fit items-center opacity-90">
                 <div className="h-1 w-12 bg-black" />
                 <div onClick={() => setSlide(0)} className="cursor-pointer size-6 rounded-full bg-black flex">
                     <div style={{ visibility: slide === 0 ? "visible" : "hidden" }} className="size-5 rounded-full bg-gray-400 m-auto" />
@@ -361,7 +362,7 @@ export default function Portfolio() {
                     <div style={{ visibility: slide === 100 ? "visible" : "hidden" }} className="size-5 rounded-full bg-gray-400 m-auto" />
                 </div>
                 <div className="h-1 w-12 bg-black" />
-            </div>
+            </div> */}
         </div>
     )
 }
