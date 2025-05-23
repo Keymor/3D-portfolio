@@ -1,7 +1,7 @@
 export default function About() {
     return (
         <div className="w-screen h-[100lvh] bg-[rgb(40,36,33,1)] flex flex-col sm:flex-row relative sm:pt-15">
-            <div className="flex flex-col gap-1 sm:gap-[5vh] m-auto z-1">
+            <div className="flex flex-col gap-5 sm:gap-[5vh] mx-auto mt-auto sm:m-auto z-1">
                 <div className=" relative flex">
                     <h1 className="text-7xl sm:text-[12rem] font-bold fontAbout text-white z-9 relative">ABOUT ME</h1>
                     <div className="absolute bg-no-repeat sm:-top-20 sm:left-140 sm:size-50 size-20 left-80 -top-10 bg-contain bg-[url('/figP1.png')] z-1" />
@@ -16,7 +16,7 @@ export default function About() {
                     Always learning, always evolving —<br />
                     let’s create something amazing together!</p>
             </div>
-            <div className="flex mb-auto mx-auto sm:mr-auto sm:my-auto">
+            <div className="flex mb-auto mt-10 mx-auto sm:mr-auto sm:my-auto">
                 <div style={{ backgroundSize: '150%', backgroundPosition: '55% 30%' }} className="w-[80vw] h-[30vh] sm:w-[30vw] sm:h-[78vh] bg-gray-600 rounded-4xl bg-[url('/photo.jpg')] shadow-2xl/100 z-1" />
             </div>
             <div className="absolute bg-no-repeat top-120 sm:top-60 right-0 h-50 w-30 bg-contain bg-[url('/figP2.png')] z-0" />
