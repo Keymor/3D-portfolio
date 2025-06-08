@@ -20,6 +20,53 @@ export default function Portfolio() {
     // const [globalIndex, setGlobalIndex] = useState(2)
     const [hover, setHover] = useState(0)
 
+    const textArray = [
+        {
+            header: <h1 className="text-xl font-bold text-black text-center">M84 stun grenade</h1>,
+            dis:
+                <p className="text-md mt-1 text-start text-black">
+                    <b>Modeling</b>: Maya<br />
+                    <b>Unwrapping</b>: Rizom UV<br />
+                    <b>Texturing</b>: Substance Painter<br />
+                    <b>Render</b>: Marmoset Toolbag<br />
+                    <b>Tris</b>: 7300<br />
+                </p>
+        },
+        {
+            header: <h1 className="text-xl font-bold text-black text-center">Magnum </h1>,
+            dis:
+                <p className="text-md mt-1 text-start text-black">
+                    <b>Modeling</b>: Maya<br />
+                    <b>Unwrapping</b>: Rizom UV<br />
+                    <b>Texturing</b>: Substance Painter<br />
+                    <b>Render</b>: Marmoset Toolbag<br />
+                    <b>Tris</b>: 12800<br />
+                </p>
+        },
+        {
+            header: <h1 className="text-xl font-bold text-black text-center">Military ammo box</h1>,
+            dis:
+                <p className="text-md mt-1 text-start text-black">
+                    <b>Modeling</b>: Maya<br />
+                    <b>Unwrapping</b>: Rizom UV<br />
+                    <b>Texturing</b>: Substance Painter<br />
+                    <b>Render</b>: Marmoset Toolbag<br />
+                    <b>Tris</b>: 11600<br />
+                </p>
+        },
+        {
+            header: <h1 className="text-xl font-bold text-black text-center">"Andúril – Flame of the West"</h1>,
+            dis:
+                <p className="text-md mt-1 text-start text-black">
+                    <b>Modeling</b>: Maya<br />
+                    <b>Unwrapping</b>: Rizom UV<br />
+                    <b>Texturing</b>: Substance Painter<br />
+                    <b>Render</b>: Marmoset Toolbag<br />
+                    <b>Tris</b>: 10000<br />
+                </p>
+        },
+    ]
+
     const imgArray = [
         {
             bgColor: "rgb(32, 32, 32)",
@@ -61,16 +108,7 @@ export default function Portfolio() {
             opacity: 1,
             w: ''
         },
-        {
-            bgColor: "rgb(32, 32, 32)",
-            scale: 350,
-            positionX: -38,
-            positionY: 0,
-            img: "url(/homeImg2.jpg)",
-            ofset: 120,
-            opacity: 1,
-            w: ''
-        },
+
     ]
     // const [imgArray, setImgArray] = useState([
     //     {
@@ -209,10 +247,14 @@ export default function Portfolio() {
                 </div>
                 <div
                     style={clicked === 1 ? { width: '15vw', opacity: 1 } : {}}
-                    className="opacity-0 text-black text-center py-10 w-[0vw] h-[40vh] wrap-break-word z-5 duration-500">
-                    <h1 className="text-4xl font-bold">HEADER</h1>
-                    <p className="text-xl mt-10">
-                        lkamsdlkaskdn kjasndlkjans jknasdjk asd aljsndjajs d ajksdnlkjansdk aks dkljasmdma sd,k as dajsdhajshd ,jas d,jah sdjah sdansdklj asd ajk s
+                    className="opacity-0 text-black text-center py-5 w-[0vw] h-[40vh] wrap-break-word z-5 duration-500">
+                    <h1 className="text-4xl font-bold">M84 stun grenade (flashbang)</h1>
+                    <p className="text-xl mt-5 text-start">
+                        <b>Modeling</b>: Maya<br />
+                        <b>Unwrapping</b>: Rizom UV<br />
+                        <b>Texturing</b>: Substance Painter<br />
+                        <b>Render</b>: Marmoset Toolbag<br />
+                        <b>Tris</b>: 7300<br />
                     </p>
                 </div>
                 <div
@@ -224,14 +266,18 @@ export default function Portfolio() {
                     onMouseEnter={() => setHover(2)}
                     onMouseLeave={() => setHover(0)}
                     onClick={() => clicked > 0 ? setClicked(0) : setClicked(2)}>{box2}
-                    <div
-                        style={clicked === 2 ? { width: '15vw', opacity: 1 } : {}}
-                        className="opacity-0 text-black text-center py-10 w-[0vw] h-[40vh] wrap-break-word z-5 duration-500">
-                        <h1 className="text-4xl font-bold">HEADER</h1>
-                        <p className="text-xl mt-10">
-                            lkamsdlkaskdn kjasndlkjans jknasdjk asd aljsndjajs d ajksdnlkjansdk aks dkljasmdma sd,k as dajsdhajshd ,jas d,jah sdjah sdansdklj asd ajk s
-                        </p>
-                    </div>
+                </div>
+                <div
+                    style={clicked === 2 ? { width: '15vw', opacity: 1 } : {}}
+                    className="opacity-0 text-black text-center py-5 w-[0vw] h-[40vh] z-5 duration-500">
+                    <h1 className="text-4xl font-bold">Magnum “Taurus Raging Hunter” </h1>
+                    <p className="text-xl mt-5 text-start">
+                        <b>Modeling</b>: Maya<br />
+                        <b>Unwrapping</b>: Rizom UV<br />
+                        <b>Texturing</b>: Substance Painter<br />
+                        <b>Render</b>: Marmoset Toolbag<br />
+                        <b>Tris</b>: 12800<br />
+                    </p>
                 </div>
                 <div
                     className="flex duration-300 z-3 h-fit mx-1 xl:mx-5 hover:scale-102"
@@ -242,14 +288,18 @@ export default function Portfolio() {
                     onMouseEnter={() => setHover(3)}
                     onMouseLeave={() => setHover(0)}
                     onClick={() => clicked > 0 ? setClicked(0) : setClicked(3)}>{box3}
-                    <div
-                        style={clicked === 3 ? { width: '15vw', opacity: 1 } : {}}
-                        className="opacity-0 text-black text-center py-10 w-[0vw] h-[40vh] wrap-break-word z-5 duration-500">
-                        <h1 className="text-4xl font-bold">HEADER</h1>
-                        <p className="text-xl mt-10">
-                            lkamsdlkaskdn kjasndlkjans jknasdjk asd aljsndjajs d ajksdnlkjansdk aks dkljasmdma sd,k as dajsdhajshd ,jas d,jah sdjah sdansdklj asd ajk s
-                        </p>
-                    </div>
+                </div>
+                <div
+                    style={clicked === 3 ? { width: '15vw', opacity: 1 } : {}}
+                    className="opacity-0 text-black text-center py-10 w-[0vw] h-[40vh] wrap-break-word z-5 duration-500">
+                    <h1 className="text-4xl font-bold">Military ammo box</h1>
+                    <p className="text-xl mt-10 text-start">
+                        <b>Modeling</b>: Maya<br />
+                        <b>Unwrapping</b>: Rizom UV<br />
+                        <b>Texturing</b>: Substance Painter<br />
+                        <b>Render</b>: Marmoset Toolbag<br />
+                        <b>Tris</b>: 11600<br />
+                    </p>
                 </div>
                 <div
                     className="flex duration-300 z-3 h-fit mx-1 xl:mx-5 hover:scale-102"
@@ -260,14 +310,18 @@ export default function Portfolio() {
                     onMouseEnter={() => setHover(4)}
                     onMouseLeave={() => setHover(0)}
                     onClick={() => clicked > 0 ? setClicked(0) : setClicked(4)}>{box4}
-                    <div
-                        style={clicked === 4 ? { width: '15vw', opacity: 1 } : {}}
-                        className="opacity-0 text-black text-center py-10 w-[0vw] h-[40vh] wrap-break-word z-5 duration-500">
-                        <h1 className="text-4xl font-bold">HEADER</h1>
-                        <p className="text-xl mt-10">
-                            lkamsdlkaskdn kjasndlkjans jknasdjk asd aljsndjajs d ajksdnlkjansdk aks dkljasmdma sd,k as dajsdhajshd ,jas d,jah sdjah sdansdklj asd ajk s
-                        </p>
-                    </div>
+                </div>
+                <div
+                    style={clicked === 4 ? { width: '15vw', opacity: 1 } : {}}
+                    className="opacity-0 text-black text-center py-10 w-[0vw] h-[40vh] wrap-break-word z-5 duration-500">
+                    <h1 className="text-4xl font-bold">"Andúril – Flame of the West"</h1>
+                    <p className="text-xl mt-10 text-start">
+                        <b>Modeling</b>: Maya<br />
+                        <b>Unwrapping</b>: Rizom UV<br />
+                        <b>Texturing</b>: Substance Painter<br />
+                        <b>Render</b>: Marmoset Toolbag<br />
+                        <b>Tris</b>: 10000<br />
+                    </p>
                 </div>
                 <div style={clicked > 0 ? { opacity: 0 } : { opacity: 1 }} className="flex h-[75vh] w-[8vw] z-1 duration-300">
                     <h1 className="fontPortfolio whitespace-nowrap size-fit -translate-x-3/10 text-start">PORTFOLIO</h1>
@@ -295,8 +349,8 @@ export default function Portfolio() {
                         className="bg-cover w-full h-2/3 bg-no-repeat rounded-t-2xl"
                     />
                     <div className="p-5 bg-white h-1/3 rounded-b-2xl">
-                        <h1 className="text-black text-center font-bold text-3xl">Some text</h1>
-                        <p className="text-black text-center text-2xl">aaosmmdkmaskdmalk sa dlkja sdljk alsjd alksjd akjsdklas d alksjd klad  klajs  dlksm</p>
+                        {textArray[clicked].header}
+                        {textArray[clicked].dis}
                     </div>
                 </div>
                 {imgArray.map((item: ImageBoxProps, index: number) => {
@@ -351,7 +405,7 @@ export default function Portfolio() {
             <div className=" absolute bg-[url('/fig1.png')] bg-cover bottom-10 left-15 w-39 h-40 z-1" />
             <div className=" absolute bg-[url('/fig2.png')] bg-no-repeat bg-contain bottom-10 right-20 size-22 z-0" />
             <div className=" absolute bg-[url('/fig3.png')] bg-no-repeat bg-contain -bottom-20 size-60 z-0" />
-            <div className=" absolute bg-[url('/fig4.png')] bg-no-repeat bg-contain top-5 sm:top-34 right-3/10 size-37 z-0" />
+            <div className=" absolute bg-[url('/fig4.png')] bg-no-repeat bg-contain top-1 sm:top-34 right-5/10 sm:right-3/10 size-25 sm:size-37 z-0" />
             <div className=" absolute bg-[url('/fig5.png')] bg-no-repeat bg-contain top-10 right-0 h-45 w-30 z-0" />
             {/* <div className=" hidden sm:flex flex-row m-auto gap-5 w-fit items-center opacity-90">
                 <div className="h-1 w-12 bg-black" />

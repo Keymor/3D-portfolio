@@ -77,7 +77,7 @@ export default function Contact() {
             <div className=" bg-[url('/logoBig.png')] h-[45vh] w-[60vw] sm:w-[27vw] absolute bottom-0 right-0 sm:right-1/9 bg-no-repeat bg-cover opacity-25 z-0" />
             <div className="bg-[url('/figCont.png')] scale-70 sm:scale-100 h-50 w-80 absolute top-9/13 right-1/2 sm:top-[15vh] sm:right-0 bg-no-repeat" />
             <div className="w-full h-10" />
-            <div className=" absolute bottom-10 sm:bottom-1/2 sm:translate-y-1/2 right-[85%] sm:right-10 w-[5vw] sm:h-[30vh] flex flex-row sm:flex-col gap-4">
+            <div className=" absolute bottom-10 sm:bottom-1/2 sm:translate-y-1/2 right-[85%] sm:right-10 w-[5vw] sm:h-[30vh] flex flex-row sm:flex-col gap-4 z-20">
                     <a href="https://www.artstation.com/petrov_alexey" target="_blank" className="cursor-pointer sm:mx-auto sm:mt-auto">
                         <div className="size-15 bg-[url('/link1.png')] bg-contain bg-no-repeat" />
                     </a>
@@ -87,7 +87,7 @@ export default function Contact() {
                     <a href="https://www.linkedin.com/in/oleksii-petrov-82a19b238/" target="_blank" className="cursor-pointer mx-auto">
                         <div className="size-15 bg-[url('/link3.png')] bg-contain bg-no-repeat" />
                     </a>
-                    <a href="" target="_blank" className="cursor-pointer mx-auto mb-auto">
+                    <a href="mailto:petrov.alexey.nikolaevich@gmail.com" target="_blank" className="cursor-pointer mx-auto mb-auto">
                         <div className="size-15 bg-[url('/link4.png')] bg-contain bg-no-repeat" />
                     </a>
                 </div>
